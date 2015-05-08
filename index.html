@@ -1,33 +1,26 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>composer/installers by shama</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <title>composer/installers by composer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>composer/installers</h1>
-        <p>A Multi-Framework Composer Library Installer</p>
-        <p class="view"><a href="https://github.com/composer/installers">View the Project on GitHub <small>composer/installers</small></a></p>
-        <ul>
-          <li><a href="https://github.com/composer/installers/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/composer/installers/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/composer/installers">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>A Multi-Framework <a href="http://getcomposer.org">Composer</a> Library Installer</h1>
+    <section class="page-header">
+      <h1 class="project-name">composer/installers</h1>
+      <h2 class="project-tagline">A Multi-Framework Composer Library Installer</h2>
+      <a href="https://github.com/composer/installers" class="btn">View on GitHub</a>
+      <a href="https://github.com/composer/installers/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/composer/installers/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="a-multi-framework-composer-library-installer" class="anchor" href="#a-multi-framework-composer-library-installer" aria-hidden="true"><span class="octicon octicon-link"></span></a>A Multi-Framework <a href="http://getcomposer.org">Composer</a> Library Installer</h1>
 
 <p><a href="http://travis-ci.org/composer/installers"><img src="https://secure.travis-ci.org/composer/installers.png" alt="Build Status"></a></p>
 
@@ -43,8 +36,6 @@ package type.</p>
 <li>CakePHP 2+    <code>cakephp-</code>
 </li>
 <li>CodeIgniter   <code>codeigniter-</code>
-</li>
-<li>concrete5     <code>concrete5-</code>
 </li>
 <li>Drupal        <code>drupal-</code>
 </li>
@@ -78,7 +69,9 @@ package type.</p>
 </li>
 <li>Zend          <code>zend-</code>
 </li>
-</ul><p><strong>Natively Supported Frameworks</strong>:</p>
+</ul>
+
+<p><strong>Natively Supported Frameworks</strong>:</p>
 
 <p>The following frameworks natively work with Composer and will be
 installed to the default <code>vendor</code> directory. <code>composer/installers</code>
@@ -87,28 +80,31 @@ is not needed to install packages with these frameworks:</p>
 <ul>
 <li>Aura</li>
 <li>Symfony2</li>
-</ul><h2>Example <code>composer.json</code> File</h2>
+</ul>
+
+<h2>
+<a id="example-composerjson-file" class="anchor" href="#example-composerjson-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example <code>composer.json</code> File</h2>
 
 <p>This is an example for a CakePHP plugin. The only important parts to set in your
 composer.json file are <code>"type": "cakephp-plugin"</code> which describes what your
-package is and <code>"require": { "composer/installers": "~1.0" }</code> which tells composer
+package is and <code>"require": { "composer/installers": "*" }</code> which tells composer
 to load the custom installers.</p>
 
-<div class="highlight"><pre><span class="p">{</span>
-    <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"you/ftp"</span><span class="p">,</span>
-    <span class="nt">"type"</span><span class="p">:</span> <span class="s2">"cakephp-plugin"</span><span class="p">,</span>
-    <span class="nt">"require"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">"composer/installers"</span><span class="p">:</span> <span class="s2">"~1.0"</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+<div class="highlight highlight-json"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>you/ftp<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>cakephp-plugin<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>require<span class="pl-pds">"</span></span>: {
+        <span class="pl-s"><span class="pl-pds">"</span>composer/installers<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>*<span class="pl-pds">"</span></span>
+    }
+}</pre></div>
 
 <p>This would install your package to the <code>app/Plugin/Ftp/</code> folder of a CakePHP app
 when a user runs <code>php composer.phar install</code>.</p>
 
 <p>So submit your packages to <a href="http://packagist.org">packagist.org</a>!</p>
 
-<h2>Current Supported Types</h2>
+<h2>
+<a id="current-supported-types" class="anchor" href="#current-supported-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Supported Types</h2>
 
 <ul>
 <li>AGL
@@ -129,14 +125,6 @@ when a user runs <code>php composer.phar install</code>.</p>
 <li>codeigniter-library</li>
 <li>codeigniter-third-party</li>
 <li>codeigniter-module</li>
-</ul>
-</li>
-<li>concrete5
-
-<ul>
-<li>concrete5-block</li>
-<li>concrete5-package</li>
-<li>concrete5-theme</li>
 </ul>
 </li>
 <li>Drupal
@@ -255,28 +243,31 @@ when a user runs <code>php composer.phar install</code>.</p>
 <li>zend-extra</li>
 </ul>
 </li>
-</ul><p>Types in <strong>bold</strong> have been marked stable and you can rely on those install
+</ul>
+
+<p>Types in <strong>bold</strong> have been marked stable and you can rely on those install
 paths to not change. A new type must be created if any adjustments are
 requested for an install path.</p>
 
-<h2>Custom Install Paths</h2>
+<h2>
+<a id="custom-install-paths" class="anchor" href="#custom-install-paths" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom Install Paths</h2>
 
 <p>If you are consuming a package that uses the <code>composer/installers</code> you can
 override the install path with the following extra in your <code>composer.json</code>:</p>
 
-<div class="highlight"><pre><span class="p">{</span>
-    <span class="nt">"extra"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">"installer-paths"</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">"your/custom/path/{$name}/"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"shama/ftp"</span><span class="p">,</span> <span class="s2">"vendor/package"</span><span class="p">]</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+<div class="highlight highlight-json"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>extra<span class="pl-pds">"</span></span>: {
+        <span class="pl-s"><span class="pl-pds">"</span>installer-paths<span class="pl-pds">"</span></span>: {
+            <span class="pl-s"><span class="pl-pds">"</span>your/custom/path/{$name}/<span class="pl-pds">"</span></span>: [<span class="pl-s"><span class="pl-pds">"</span>shama/ftp<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>vendor/package<span class="pl-pds">"</span></span>]
+        }
+    }
+}</pre></div>
 
 <p>This would use your custom path for each of the listed packages. The available
 variables to use in your paths are: <code>${name}</code>, <code>{$vendor}</code>, <code>{$type}</code>.</p>
 
-<h2>Custom Install Names</h2>
+<h2>
+<a id="custom-install-names" class="anchor" href="#custom-install-names" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom Install Names</h2>
 
 <p>If you're a package author and need your package to be named differently when
 installed consider using the <code>installer-name</code> extra.</p>
@@ -288,19 +279,19 @@ package author actually need the package to be named and installed to
 <code>Plugin/Ftp</code>. Using the following config within your <strong>package</strong> <code>composer.json</code>
 will allow this:</p>
 
-<div class="highlight"><pre><span class="p">{</span>
-    <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"shama/cakephp-ftp"</span><span class="p">,</span>
-    <span class="nt">"type"</span><span class="p">:</span> <span class="s2">"cakephp-plugin"</span><span class="p">,</span>
-    <span class="nt">"extra"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">"installer-name"</span><span class="p">:</span> <span class="s2">"Ftp"</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+<div class="highlight highlight-json"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>shama/cakephp-ftp<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>cakephp-plugin<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>extra<span class="pl-pds">"</span></span>: {
+        <span class="pl-s"><span class="pl-pds">"</span>installer-name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Ftp<span class="pl-pds">"</span></span>
+    }
+}</pre></div>
 
 <p>Please note the name entered into <code>installer-name</code> will be the final and will
 not be inflected.</p>
 
-<h2>Contribute!</h2>
+<h2>
+<a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute!</h2>
 
 <ul>
 <li>
@@ -310,20 +301,24 @@ dependencies. See <a href="https://github.com/composer/composer#installation--us
 <li>Use the command <code>phpunit</code> to run the tests. See <a href="http://phpunit.de">PHPUnit</a>.</li>
 <li>Create a branch, commit, push and send us a
 <a href="https://help.github.com/articles/using-pull-requests">pull request</a>.</li>
-</ul><p>To ensure a consistent code base, you should make sure the code follows the
+</ul>
+
+<p>To ensure a consistent code base, you should make sure the code follows the
 <a href="http://symfony.com/doc/2.0/contributing/code/standards.html">Coding Standards</a>
 which we borrowed from Symfony.</p>
 
 <p>If you would like to help, please take a look at the list of
 <a href="https://github.com/composer/installers/issues">issues</a>.</p>
-      </section>
-    </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/shama">shama</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/composer/installers">composer/installers</a> is maintained by <a href="https://github.com/composer">composer</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -336,3 +331,4 @@ which we borrowed from Symfony.</p>
 
   </body>
 </html>
+
